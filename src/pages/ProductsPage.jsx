@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import { obtenerProductosApi } from "../apis/productsApi";
 
 const ProductsPage = () => {
   const [productos, setProductos] = useState([]);
 
   const obtenerProductos = async () => {
-    const products = await axios.get("https://fakerapi.it/api/v1/products");
-    // console.log(products.data.data);
-    setProductos(products.data.data);
+    const products = await obtenerProductosApi();
+    setProductos(products);
   };
 
   useEffect(() => {
