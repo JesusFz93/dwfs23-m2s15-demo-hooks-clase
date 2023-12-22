@@ -14,6 +14,8 @@ import CustomersPage from "../pages/CustomersPage";
 import BrandPage from "../pages/BrandPage";
 import StatePage from "../pages/StatePage";
 import MedicinesPage from "../pages/MedicinesPage";
+import EfectosPage from "../pages/EfectosPage";
+import ProductsPage from "../pages/ProductsPage";
 
 const AppRouter = () => {
   return (
@@ -28,6 +30,8 @@ const AppRouter = () => {
           <Route path="/customers" element={<CustomersPage />} />
           <Route path="/state" element={<StatePage />} />
           <Route path="/medicines" element={<MedicinesPage />} />
+          <Route path="/efectos" element={<EfectosPage />} />
+          <Route path="/products" element={<ProductsPage />} />
 
           <Route path="/*" element={<Navigate to="/" replace />} />
         </Routes>
